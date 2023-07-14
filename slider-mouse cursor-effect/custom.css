@@ -1,0 +1,236 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#hero-slider {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-btns {
+    max-width: 880px;
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 0;
+}
+
+[class*="swiper-button-"] {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-flex;
+    background-color: #6b69d4;
+    color: #fff;
+    margin: 0 20px;
+    --swiper-navigation-size: 25px;
+}
+
+[class*="swiper-button-"]:hover {
+    background-color: #5050c0;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    opacity: .6;
+}
+
+.swiper-content {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+.enter-btn {
+    padding: 10px 30px;
+    font-size: 25px;
+    background-color: #6b69d4;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.enter-btn:hover {
+    background-color: #5050c0;
+}
+
+.swiper-slide:active {
+    cursor: grabbing;
+}
+
+.swiper-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-img:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004f;
+    z-index: 1;
+}
+
+.hamburger-menu {
+    width: 55px;
+    height: 55px;
+    background-color: #00000089;
+    border: 2px solid #fff;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 35px);
+    width: calc(100% - 22px);
+}
+
+.hamburger-menu i {
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+.about-sec {
+    width: 100%;
+    height: 100%;
+    background-color: #6b69d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.arrow-top,
+.arrow-bottom {
+    background-color: rgb(0, 0, 0);
+    height: 3px;
+    left: 15px;
+    position: absolute;
+    top: 49%;
+    width: 40%;
+}
+
+.arrow-top {
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+}
+
+.arrow-bottom {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px) rotate(-90deg);
+    }
+
+    50% {
+        transform: translateY(15px) rotate(-90deg);
+    }
+}
+
+#cursor {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+    transition: all 0.15s ease-out;
+}
+
+#cursor-border {
+    --size: 40px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    pointer-events: none;
+    transition: all 0.15s ease-out;
+    z-index: 999;
+}

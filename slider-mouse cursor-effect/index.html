@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Slider Mouse Cursor Effect </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./custom.css" />
+</head>
+
+<body>
+    <div id="hero-slider"> 
+        <a href="#" data-cursor="pointer" class="hamburger-menu hoverable">
+            <div class="burger"><i></i><i></i><i></i></div>
+        </a> 
+        <!-- Swiper -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-img"><img src="img/2.jpg" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img"><img src="img/3.jpg" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img"><img src="img/4.jpg" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img"><img src="img/1.jpg" alt=""></div>
+                    <div class="swiper-content"><a href="#about-sec" class="enter-btn" data-cursor="pointer">Enter</a></div>
+                </div>
+            </div>
+            <div class="swiper-button-prev" data-cursor="pointer"></div>
+            <div class="swiper-button-next" data-cursor="pointer"></div>
+        </div>
+    </div>
+
+    <div class="about-sec" id="about-sec">
+      <a href="#hero-slider" class="arrow" data-cursor="pointer">
+        <div class="arrow-top"></div>
+        <div class="arrow-bottom"></div>
+      </a>
+    </div>
+
+    <div id="cursor"></div>
+    <div id="cursor-border"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./custom.js"></script>
+</body>
+
+</html>
